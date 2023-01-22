@@ -1,0 +1,126 @@
+:root {
+  --bg-color: #09090A;
+  --details-color: #8B5CF6;
+  --fnt-button-color: #FFFFFF;
+  --input-color:#18181B;
+  --fnt-days-color: #A1A1AA;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4.8rem;
+  position: fixed;
+  width: 100%;
+
+  background-color: var(--bg-color);
+}
+
+button {
+  width: fit-content;
+  height: 5.2rem;
+
+  display: flex;
+  padding: 1.6rem 2.4rem;
+  gap: 1.2rem;
+
+  background: none;
+  border: 1px solid var(--details-color);
+  border-radius: 8px;
+
+  color: var(--fnt-button-color);
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 1.6rem;
+
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+
+  padding: 18.2rem 4.8rem 4.8rem;
+  width: fit-content;
+}
+
+.habits {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.4rem;
+}
+
+.habit {
+  width: 6.4rem;
+  height: 6.4rem;
+
+  font-size: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 3.2rem;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  justify-content: center;
+}
+
+.day div {
+  margin-bottom: 8px;
+
+  color: var(--fnt-days-color);
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 125%;
+}
+
+input[type=checkbox] {
+  appearance: none;
+  --webkit-appearance: none;
+
+  width: 6.4rem;
+  height: 6.4rem;
+
+  background-color: var(--input-color);
+
+  border: 2px solid #27272A;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked {
+  background-color: var(--details-color);
+
+  border-color: #a78bfa;
+}
+
+@media (max-width: 570px) {
+  button p {
+    display: none;
+  }
+}
